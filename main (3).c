@@ -16,7 +16,7 @@ int main(){
     int i;
     for(i=0;i<=n-1;i++){
         printf("Enter name: ");
-        scanf("%s",students[i].name);
+        scanf("%s",students[i].Name);
         printf("Enter RegNo: ");
         scanf("%s",students[i].RegistrationNo);
         printf("Enter Blood Group: ");
@@ -45,12 +45,12 @@ int main(){
             printf("Match found! Retrieving Details.....");
             printf("Student's Blood group is: %s\n",students[i].BloodGroup);
             printf("Student's Emergency no is: %ld \n",students[i].Emergency_PhoneNo);
-            printf("Student's Reg No is: %s\n",students[i].RegNo);
+            printf("Student's Reg No is: %s\n",students[i].RegistrationNo);
             printf("Student's CGPA is: %.1f \n",students[i].CGPA);
         }
         else
             printf("%s\n",search);
-            printf("%s\n",students[i].name);
+            printf("%s\n",students[i].Name);
     }
     return 0;
 }
