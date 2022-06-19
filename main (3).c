@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 struct Student{
-    char name[30];
-    char RegNo[30];
-    char BloodGrp[5];
+    char Name[30];
+    char RegistrationNo[30];
+    char BloodGroup[5];
     char Emergency_PhoneNo[12];
     float CGPA;
 };
@@ -18,9 +18,9 @@ int main(){
         printf("Enter name: ");
         scanf("%s",students[i].name);
         printf("Enter RegNo: ");
-        scanf("%s",students[i].RegNo);
+        scanf("%s",students[i].RegistrationNo);
         printf("Enter Blood Group: ");
-        scanf("%s",students[i].BloodGrp);
+        scanf("%s",students[i].BloodGroup);
         printf("Enter Emergency Contact:  ");
         scanf("%s",&students[i].Emergency_PhoneNo);
         while(strlen(students[i].Emergency_PhoneNo)>10){
@@ -41,9 +41,9 @@ int main(){
     printf("Enter Reg No of student you want to find in database: ");
     scanf("%s",search);
     for(i=0;i<=n-1;i++){
-        if(strcmp(students[i].RegNo,search)==0){
+        if(strcmp(students[i].RegistrationNo,search)==0){
             printf("Match found! Retrieving Details.....");
-            printf("Student's Blood group is: %s\n",students[i].BloodGrp);
+            printf("Student's Blood group is: %s\n",students[i].BloodGroup);
             printf("Student's Emergency no is: %ld \n",students[i].Emergency_PhoneNo);
             printf("Student's Reg No is: %s\n",students[i].RegNo);
             printf("Student's CGPA is: %.1f \n",students[i].CGPA);
